@@ -1,3 +1,6 @@
+# Data files (for compliance with end user licence)
+data/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
