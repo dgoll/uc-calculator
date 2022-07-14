@@ -33,19 +33,16 @@ def tests(session):
 
 
 @nox.session(python="3.10")
+def lint(session):
+    args = session.posargs or LOCATIONS
+    install_with_constraints(
+        session, "flake8", "flake8-black", "flake8-bugbear", "flake8-import-order"
+    )
+    session.run("flake8", *args)
+
+
+@nox.session(python="3.10")
 def black(session):
     args = session.posargs or LOCATIONS
     install_with_constraints(session, "black")
     session.run("black", *args)
-
-
-@nox.session(python="3.10")
-def lint(session):
-    args = session.posargs or LOCATIONS
-    install_with_constraints(
-        session,
-        "flake8",
-        "flake8-black",
-        "flake8-bugbear",
-    )
-    session.run("flake8", *args)

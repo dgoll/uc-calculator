@@ -1,6 +1,8 @@
 # .flake8
 [flake8]
-select = B,B9,BLK,C,E,F,W
+select = B,B9,BLK,C,E,F,I,W
 ignore = E203,E501,W503
 max-line-length = 80
+max-complexity = 10
+application-import-names = uc_calculator,tests
 import-order-style = google
