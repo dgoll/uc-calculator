@@ -19,11 +19,14 @@ scipy = "^1.8.1"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
-pylint = "^2.14.4"
 ipykernel = "^6.15.0"
 pytest = "^7.1.2"
 coverage = {extras = ["toml"], version = "^6.4.1"}
 pytest-cov = "^3.0.0"
+flake8 = "^4.0.1"
+flake8-bugbear = "^22.7.1"
+flake8-black = "^0.3.3"
+nox = "^2022.1.7"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
